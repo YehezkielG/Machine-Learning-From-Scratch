@@ -33,4 +33,4 @@ class Model():
         return np.dot(X, self.weight) + self.bias
     
     def lost_func(self,X:np.ndarray, y:np.ndarray,y_hat):
-        return 1/self.m * (np.sum(y_hat - y)**2)
+        return (1 / (2 * self.m)) * np.sum((y_hat - y)**2)
